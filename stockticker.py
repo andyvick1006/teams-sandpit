@@ -81,7 +81,7 @@ ENTRY FUNCTION FOR HEROKU
 
 @app.route('/', methods=['GET'])
 def landing():
-    return render_template('home.html')
+    return render_template('templates/home.html')
 #    return '<html><body><h1>Hello World</h1></body></html>'
 
 @app.route('/', methods=['POST'])
