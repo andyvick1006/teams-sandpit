@@ -34,7 +34,9 @@ def post_message_markdown(at, text, roomId='', toPersonId='', toPersonEmail=''):
         payload['toPersonId'] = toPersonId
     if toPersonEmail:
         payload['toPersonEmail'] = toPersonEmail
-    payload['files'] = 'http://web-server.caaspilot.com/welcome.png'
+    images_dict = { 'AV' : 'http://web-server.caaspilot.com/hongkong.jpg'}
+    if 'Unknown' in text and 'AV' in text:
+        payload['files'] = images_dict['AV']
     resp = requests.post(url=_url('/messages'), json=payload, headers=headers)
     message_dict = json.loads(resp.text)
     message_dict['statuscode'] = str(resp.status_code)
