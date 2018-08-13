@@ -47,7 +47,7 @@ def post_message_markdown(at, text, roomId='', toPersonId='', toPersonEmail=''):
     elif 'Unknown' in text and 'JS' in text.upper():
         payload['files'] = images_dict['DH']
     headers = {'Authorization': _fix_at(at), 'content-type': 'application/json'}
-    payload = {'markdown': text}
+    payload['markdown'] = text
     if roomId:
         payload['roomId'] = roomId
     if toPersonId:
