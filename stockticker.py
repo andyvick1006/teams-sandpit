@@ -26,6 +26,7 @@ def get_message(at, messageId):
     return message_dict
 
 def post_message_markdown(at, text, roomId='', toPersonId='', toPersonEmail=''):
+    payload = {}
     images_dict = { 'AV' : 'http://web-server.caaspilot.com/hongkong.jpg',
               'DH' : 'http://web-server.caaspilot.com/dan.jpg',
               'LA' : 'http://web-server.caaspilot.com/lotfi.jpg',
