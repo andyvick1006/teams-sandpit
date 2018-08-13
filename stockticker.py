@@ -34,9 +34,25 @@ def post_message_markdown(at, text, roomId='', toPersonId='', toPersonEmail=''):
         payload['toPersonId'] = toPersonId
     if toPersonEmail:
         payload['toPersonEmail'] = toPersonEmail
-    images_dict = { 'AV' : 'http://web-server.caaspilot.com/hongkong.jpg'}
+    images_dict = { 'AV' : 'http://web-server.caaspilot.com/hongkong.jpg',
+                  'DH' : 'http://web-server.caaspilot.com/dan.jpg',
+                  'LA' : 'http://web-server.caaspilot.com/lotfi.jpg',
+                  'SF' : 'http://web-server.caaspilot.com/sheralee.jpg',
+                  'PA' : 'http://web-server.caaspilot.com/paul.jpg',
+                  'JS' : 'http://web-server.caaspilot.com/johnnie.jpg'}
     if 'Unknown' in text and 'AV' in text:
         payload['files'] = images_dict['AV']
+        text = test + '(Who is this Super hero!)'
+    elif 'Unknown' in text and 'DH' in text:
+        payload['files'] = images_dict['DH']
+    elif 'Unknown' in text and 'LA' in text:
+        payload['files'] = images_dict['DH']
+    elif 'Unknown' in text and 'SF' in text:
+        payload['files'] = images_dict['DH']
+    elif 'Unknown' in text and 'PA' in text:
+        payload['files'] = images_dict['DH']
+    elif 'Unknown' in text and 'JS' in text:
+        payload['files'] = images_dict['DH']
     resp = requests.post(url=_url('/messages'), json=payload, headers=headers)
     message_dict = json.loads(resp.text)
     message_dict['statuscode'] = str(resp.status_code)
