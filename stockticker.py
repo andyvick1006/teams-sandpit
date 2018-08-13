@@ -29,7 +29,7 @@ def post_message_markdown(at, text, roomId='', toPersonId='', toPersonEmail=''):
     payload = {}
     images_dict = { 'AV' : 'http://web-server.caaspilot.com/hongkong.jpg',
               'DH' : 'http://web-server.caaspilot.com/dan.jpg',
-              'LA' : 'http://web-server.caaspilot.com/tintin.jpg',
+              'LA' : 'http://web-server.caaspilot.com/tintin.png',
               'SF' : 'http://web-server.caaspilot.com/sheralee.jpg',
               'PA' : 'http://web-server.caaspilot.com/paul.jpg',
               'JS' : 'http://web-server.caaspilot.com/johnnie.jpg'}
