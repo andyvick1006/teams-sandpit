@@ -40,9 +40,9 @@ def post_message_markdown(at, text, roomId='', toPersonId='', toPersonEmail=''):
                   'SF' : 'http://web-server.caaspilot.com/sheralee.jpg',
                   'PA' : 'http://web-server.caaspilot.com/paul.jpg',
                   'JS' : 'http://web-server.caaspilot.com/johnnie.jpg'}
-    if 'Unknown' in text and 'AV' in text:
+    if 'Unknown' in text and 'AV' in text.upper():
         payload['files'] = images_dict['AV']
-        text = test + '(Who is this Super hero!)'
+        text = text + '(Who is this Super Hero!)'
     elif 'Unknown' in text and 'DH' in text:
         payload['files'] = images_dict['DH']
     elif 'Unknown' in text and 'LA' in text:
