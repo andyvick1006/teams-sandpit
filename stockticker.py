@@ -39,13 +39,13 @@ def post_message_markdown(at, text, roomId='', toPersonId='', toPersonEmail=''):
     elif 'Unknown' in text and 'DH' in text.upper():
         payload['files'] = images_dict['DH']
     elif 'Unknown' in text and 'LA' in text.upper():
-        payload['files'] = images_dict['DH']
+        payload['files'] = images_dict['LA']
     elif 'Unknown' in text and 'SF' in text.upper():
-        payload['files'] = images_dict['DH']
+        payload['files'] = images_dict['SF']
     elif 'Unknown' in text and 'PA' in text.upper():
-        payload['files'] = images_dict['DH']
+        payload['files'] = images_dict['PA']
     elif 'Unknown' in text and 'JS' in text.upper():
-        payload['files'] = images_dict['DH']
+        payload['files'] = images_dict['JS']
     headers = {'Authorization': _fix_at(at), 'content-type': 'application/json'}
     payload['markdown'] = text
     if roomId:
